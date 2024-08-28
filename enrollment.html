@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrollment</title>
+    <link rel="stylesheet" href="school.css">
+    <link rel="stylesheet" href="enrollment.css">
+</head>
+<body>
+    <header>
+        <h2>Enrollment Form</h2>
+        <nav>
+            <ul>
+                <li><a href="school.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="recipe.html">Calories Calculator</a></li>
+                <li><a href="enrollment.html">Enrollment</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form id="enrollment-form" >
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" placeholder="Enter your full name" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Enter your email address" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" placeholder="Enter your phone number" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="course">Course of Interest:</label>
+                <select id="course"  name="course" required>
+                    <option value="">Select a Course</option>
+                    <option value="Culinary Essentials">Culinary Essentials</option>
+                    <option value="The Art Of Cooking">The Art Of Cooking</option>
+                    <option value="Mastering The Kitchen">Mastering The Kitchen</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="message">Questions (optional):</label>
+                <textarea id="message" placeholder="Enetr any query you have regarding Institute." name="message" rows="4"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </main>
+
+
+
+    
+    <div class="info">
+        <h1>Contact Us</h1>
+    <div class="contact-info">
+        <div class="info-item">
+            <p><b><u>Address:</u></b> 123 Main Street, Rawalpindi, Pakistan</p>
+        </div>
+        <div class="info-item">
+            <p><b><u>Emial:</u></b> info@example.com</p>
+        </div>
+        <div class="info-item">
+            <p><b><u>Phone:</u></b> (+92)123-4567890</p>
+        </div>
+      </div>
+      <div class="medialink">
+        <div class="fb">
+            <a href="https://facebook.com">
+                <img src="icons8-facebook-48.png" alt="Icon description">
+            </a>
+        </div>
+        <div class="yt">
+            <a href="https://youtube.com">
+                <img src="icons8-youtube-48.png" alt="Icon description">
+            </a>
+        </div>
+        <div class="insta">
+            <a href="https://instagram.com">
+            <img src="icons8-instagram-48.png" alt="Icon description">
+        </a></div>
+        <div class="tweet">
+            <a href="https://twitter.com">
+                <img src="icons8-twitter-48.png" alt="Icon description">
+            </a>
+        </div>
+      </div>
+        <footer>
+            <p>&copy; 2024 Culinary Institute. All rights reserved.</p>
+        </footer>
+        </div>
+        </div>
+           
+        </section>
+
+<script>
+        function handleFormSubmission(event) {
+            event.preventDefault();
+
+            // Get form data
+            const form = event.target;
+            const formData = new FormData(form);
+
+            // Send form data to the server
+            fetch('/send-email', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Display success message
+                    alert("Enrollment successful!");
+                    document.getElementById('result').innerHTML = '<p></p>';
+                    form.reset();
+                } else {
+                    // Display error message
+                    alert("Error Submitting Form.");
+
+                    document.getElementById('result').innerHTML = '<p></p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Display error message
+                document.getElementById('result').innerHTML = '<p>Error submitting form.</p>';
+            });
+        }
+
+        // Add event listener to form submission
+        const form = document.getElementById('enrollment-form');
+        form.addEventListener('submit', handleFormSubmission);
+    </script>
+
+
+        
+       
+      
+</body>
+</html>

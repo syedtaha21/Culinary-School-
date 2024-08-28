@@ -1,0 +1,243 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url(back22.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: scroll; /* Always show vertical scrollbar */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+header {
+    color: #fff;
+    background-color: #33333365;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+.main {}
+
+#home p {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(41, 41, 41);
+    text-align: center;
+    padding: 20px 200px;
+    margin-bottom: 20px;
+}
+
+#About {
+    margin-left: 15%;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 9px;
+    width: 40%;
+    padding: 200px;
+padding-top: 20px;
+padding-bottom: 90px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+    background-color: #333;
+    opacity: 60%;
+    font-size: 15px;
+}
+
+#About h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2.1rem;
+    color: white;
+}
+
+#About p {
+    margin: 4px;
+    font-size: 1.0rem;
+    margin-left: 7px;
+}
+
+.view {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#btn {
+    margin-top: 20px;
+    font-size: 15px;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #958888;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #958888;
+}
+
+#btn:hover {
+    font-size: 16px;
+    font-weight: bold;
+    border: 1.1px solid #958888;
+    border-radius: 4.1px;
+    color: white;
+    transition: 0.6s;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button[type="button"] {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.info {
+    text-align: left;
+    padding-top: 3px;
+    background-color: #33333365;
+    
+    padding-left: 15px;
+    margin-top: 9px;
+    width: 100%;
+    color: #fff;
+}
+.info h2{
+    text-align: right;
+    margin-top: 20px;
+    font-size: 2.1rem;
+}
+
+
+
+.info-item {
+    text-align: left;
+}
+
+.medialink div{
+display: inline-block;
+position: absolute;
+}
+.fb{
+    margin-right: 20px;
+    margin-top: -75px;
+    
+    margin-left: 800px;
+}
+.yt{
+    margin-right: 20px;
+    margin-top: -75px;
+    
+    margin-left: 900px;
+}
+.insta{
+    margin-right: 20px;
+    margin-top: -75px;
+    
+    margin-left: 1000px;
+}
+.tweet{
+    margin-right: 20px;
+    margin-top: -75px;
+    
+    margin-left: 1100px;
+}
+
+footer {
+    padding: 5px;
+    font-size: 19px;
+    font-weight: bold;
+    padding-bottom: 0;
+    text-align: center;
+
+}
+footer p{
+    margin-bottom: 0px;
+
+}
+
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+/* Scroll bar styles */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scroll thumb */
+    border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:black; /* Color of the scroll thumb on hover */
+}

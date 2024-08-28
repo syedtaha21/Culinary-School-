@@ -1,0 +1,94 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background:url(cors.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color: #33333365;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+main {
+    padding: 20px;
+}
+
+.course {
+    background-color: transparent;
+    
+    padding: 20px 550px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: grid;
+    text-align: center;
+}
+
+.course h2 {
+    margin-top: 0;
+}
+
+.course p {
+    margin: 10px 0;
+}
+
+.register {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 3px;
+    color: #fff;
+    background-color: #333;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 18px;
+}
+button:hover{
+    font-size: 20px;
+    font-weight: bold;
+    border: 1.1px solid #ffffff;
+    border-radius: 5.1px;
+    color: white;
+    transition: 0.6s;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .course {
+        margin: 20px;
+    }
+   
+}
+
+
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scroll thumb */
+    border-radius: 6px; /* Rounded corners */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background:black; /* Color of the scroll thumb on hover */
+}

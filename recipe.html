@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories Calculator</title>
+    <link rel="stylesheet" href="school.css">
+    <link rel="stylesheet" href="recipwe.css">
+</head>
+<body>
+    <header>
+        <h1 >Recipe Calorie Calculator</h1>
+        <nav>
+            <ul>
+                <li><a href="school.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="calories calculator.html">Calories Calculator</a></li>
+                <li><a href="enrollment.html">Enrollment</a></li>
+            </ul>
+        </nav>
+   
+
+    </header>
+    <main>
+        <form id="calorie-form">
+            <div class="form-group">
+                <label for="ingredient">Ingredient:</label><br>
+                <input type="text" placeholder="Enter the Ingredient" id="ingredient" required>
+            </div>
+            <div class="form-group">
+                <label for="calories">Calories per 100g:</label><br>
+                <input type="number" placeholder="Enter the Calories/100g" id="calories" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity (g):</label><br>
+                <input type="number" placeholder="Enter the Quantity of Ingredient in gm" id="quantity" min="0" required>
+            </div>
+            <button type="button" onclick="calculateCalories()">Calculate</button>
+        </form>
+        <div id="result"></div>
+    </main>
+
+    <div class="info">
+        <h1>Contact Us</h1>
+    <div class="contact-info">
+        <div class="info-item">
+            <p><b><u>Address:</u></b> 123 Main Street, Rawalpindi, Pakistan</p>
+        </div>
+        <div class="info-item">
+            <p><b><u>Emial:</u></b> info@example.com</p>
+        </div>
+        <div class="info-item">
+            <p><b><u>Phone:</u></b> (+92)123-4567890</p>
+        </div>
+      </div>
+      <div class="medialink">
+        <div class="fb">
+            <a href="https://facebook.com">
+                <img src="icons8-facebook-48.png" alt="Icon description">
+            </a>
+        </div>
+        <div class="yt">
+            <a href="https://youtube.com">
+                <img src="icons8-youtube-48.png" alt="Icon description">
+            </a>
+        </div>
+        <div class="insta">
+            <a href="https://instagram.com">
+            <img src="icons8-instagram-48.png" alt="Icon description">
+        </a></div>
+        <div class="tweet">
+            <a href="https://twitter.com">
+                <img src="icons8-twitter-48.png" alt="Icon description">
+            </a>
+        </div>
+      </div>
+        <footer>
+            <p>&copy; 2024 Culinary Institute. All rights reserved.</p>
+        </footer>
+        </div>
+        </div>
+    <script>
+
+
+    function calculateCalories() {
+        var ingredient = document.getElementById("ingredient").value;
+        var caloriesPer100g = parseFloat(document.getElementById("calories").value);
+        var quantity = parseFloat(document.getElementById("quantity").value);
+    
+        var totalCalories = (caloriesPer100g * quantity) / 100;
+    
+        var resultElement = document.getElementById("result");
+        resultElement.innerHTML = "<p>Total Calories for " + ingredient + ": " + totalCalories.toFixed(2) + " calories</p>";
+    }
+</script>
+</body>
+</html>
